@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texture version="1" file="game_resources.png" type="bitmap" width="506" height="1018" pixelformat="RGBA_8888" minfilter="linear" magfilter="linear" wrapt="clamp" wraps="clamp" premultiplyalpha="false">
+    <!-- Created with TexturePacker http://texturepacker.com -->
+    <!-- $TexturePacker:SmartUpdate:0fed982f9c3fcec6922352847b6efe43$ -->
+    <textureregion id="0" src="bathhat.png" x="167" y="893" width="184" height="101" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="184" srcheight="101"/>
+    <textureregion id="1" src="bathtub.png" x="2" y="501" width="294" height="176" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="294" srcheight="176"/>
+    <textureregion id="2" src="bed.png" x="2" y="2" width="414" height="301" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="414" srcheight="301"/>
+    <textureregion id="3" src="blanket.png" x="2" y="305" width="393" height="194" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="393" srcheight="194"/>
+    <textureregion id="4" src="book.png" x="2" y="679" width="161" height="158" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="161" srcheight="158"/>
+    <textureregion id="5" src="bubble.png" x="454" y="2" width="50" height="50" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="50" srcheight="50"/>
+    <textureregion id="6" src="button.png" x="165" y="739" width="123" height="37" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="123" srcheight="37"/>
+    <textureregion id="7" src="cookie.png" x="353" y="893" width="134" height="123" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="134" srcheight="123"/>
+    <textureregion id="8" src="crumb.png" x="479" y="84" width="12" height="12" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="12" srcheight="12"/>
+    <textureregion id="9" src="eyes.png" x="165" y="679" width="116" height="58" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="116" srcheight="58"/>
+    <textureregion id="10" src="foam.png" x="397" y="411" width="57" height="44" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="57" srcheight="44"/>
+    <textureregion id="11" src="letter.png" x="479" y="54" width="22" height="28" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="22" srcheight="28"/>
+    <textureregion id="12" src="monster.png" x="298" y="501" width="189" height="272" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="189" srcheight="272"/>
+    <textureregion id="13" src="progress-bar.png" x="418" y="2" width="34" height="367" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="34" srcheight="367"/>
+    <textureregion id="14" src="rituals.png" x="397" y="371" width="66" height="38" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="66" srcheight="38"/>
+    <textureregion id="15" src="sponge.png" x="290" y="775" width="192" height="116" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="192" srcheight="116"/>
+    <textureregion id="16" src="toothbrush.png" x="2" y="839" width="163" height="133" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="163" srcheight="133"/>
+    <textureregion id="17" src="z.png" x="454" y="54" width="23" height="55" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="23" srcheight="55"/>
+</texture>

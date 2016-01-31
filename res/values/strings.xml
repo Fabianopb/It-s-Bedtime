@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">It\'s Bedtime</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="loading">It\'s Bedtime!</string>
+    <string name="ritual">Rituals:</string>
+    <string name="go_to_bed">Go to bed!</string>
+    <string name="sleepiness">Sleepiness:</string>
+    
+    <string name="msg_missing_rituals">I\'m still not sleepy enough!</string>
+    <string name="msg_time_to_sleep">Oh, now I\'m sleepy&#8230; Time to go to bed!</string>
+    
+    <string name="restart">Replay game</string>
+    
+    <string name="exit_title">Quite game</string>
+    <string name="exit_message">Are you sure you want to leave now?</string>
+    <string name="exit_yes">Yes</string>
+    <string name="exit_no">No</string>
+    
+    <string name="credits">This game was developed in 48h as part of the Global Game Jam 2016. Music "Windswept" by Kevin MacLeod (incompetech.com).</string>
+    <string name="developer">Developed by Fabiano Paiva Brito</string>
+    <string name="hashtags">#GGJ16 #FGJ16</string>
+
+</resources>
