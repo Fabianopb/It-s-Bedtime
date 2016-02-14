@@ -65,7 +65,7 @@ public class BrushTeeth extends Entity {
 			        	}
 			        	//Counts progress while bubbling
 			        	if(foaming && progress < 100.0f) {
-			        		progress += 0.1f;
+			        		progress += 0.2f;
 			        		if(progress > 100.0f) progress = 100.0f;
 			        		
 			        		gm.gameScene.gameHud.setProgressBarLevel(progress);

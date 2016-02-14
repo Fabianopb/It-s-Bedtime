@@ -15,6 +15,7 @@ import org.andengine.engine.camera.Camera;
 import org.andengine.entity.IEntity;
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.MoveModifier;
+import org.andengine.entity.modifier.MoveYModifier;
 import org.andengine.entity.modifier.ScaleModifier;
 import org.andengine.entity.modifier.SequenceEntityModifier;
 import org.andengine.entity.primitive.Gradient;
@@ -87,6 +88,7 @@ public class GameScene extends Scene implements IOnSceneTouchListener {
 		gameHud = new GameHud();
 		attachChild(gameHud);
 		registerTouchArea(gameHud.button);
+		registerTouchArea(gameHud.backButton);
 		camera.setHUD(gameHud);
 		
 	}
@@ -99,7 +101,7 @@ public class GameScene extends Scene implements IOnSceneTouchListener {
 				pGLState.enableDither();
 			}
 		};
-		g.setGradient(Color.parseColor(Colors.black), Color.parseColor(Colors.blue), 0.0f, 1.0f);
+		g.setGradient(Color.parseColor(Colors.dusty_violet), Color.parseColor(Colors.hex906090), 0.0f, 1.0f);
 		setBackground(new EntityBackground(g));
 		
 	}
@@ -216,32 +218,33 @@ public class GameScene extends Scene implements IOnSceneTouchListener {
 			@Override protected void onModifierFinished(IEntity pItem) {
 				if(activityId == 0) {
 					gameHud.setProgressBarLevel(takeAShower.progress);
-					gameHud.progressBar.registerEntityModifier(new MoveModifier(1, activity.left - 100, activity.centerY + 20, activity.left + 50, activity.centerY + 20, EaseCircularOut.getInstance()));
 					takeAShower.showActivity();
 				}
 				else if(activityId == 1) {
 					gameHud.setProgressBarLevel(snacking.progress);
-					gameHud.progressBar.registerEntityModifier(new MoveModifier(1, activity.left - 100, activity.centerY + 20, activity.left + 50, activity.centerY + 20, EaseCircularOut.getInstance()));
 					snacking.showActivity();
 				}
 				else if(activityId == 2) {
 					gameHud.setProgressBarLevel(brushTeeth.progress);
-					gameHud.progressBar.registerEntityModifier(new MoveModifier(1, activity.left - 100, activity.centerY + 20, activity.left + 50, activity.centerY + 20, EaseCircularOut.getInstance()));
 					brushTeeth.showActivity();
 				}
 				else if(activityId == 3) {
 					gameHud.setProgressBarLevel(reading.progress);
-					gameHud.progressBar.registerEntityModifier(new MoveModifier(1, activity.left - 100, activity.centerY + 20, activity.left + 50, activity.centerY + 20, EaseCircularOut.getInstance()));
 					reading.showActivity();
 				}
 				else if(activityId == 10) {
 					goingToBed.showActivity();
 				}
+				gameHud.backButton.registerEntityModifier(new MoveYModifier(1, activity.top + 30, activity.top - 30));
+				gameHud.progressBar.registerEntityModifier(new MoveModifier(1, activity.left - 100, activity.centerY + 20, activity.left + 50, activity.centerY + 20, EaseCircularOut.getInstance()));
+				gameHud.backTouchable = true;
 			}
 		});
 	}
 	
 	public void bringSelectorBack() {
+		gameHud.backTouchable = false;
+		gameHud.backButton.registerEntityModifier(new MoveYModifier(1, activity.top - 30, activity.top + 30));
 		gameHud.progressBar.registerEntityModifier(new MoveModifier(1, activity.left + 50, activity.centerY + 20, activity.left - 100, activity.centerY + 20, EaseCircularOut.getInstance()));
 		duck.registerEntityModifier(new MoveModifier(1.0f, duckPosition[2], duckPosition[3], duckPosition[0], duckPosition[1], EaseCircularOut.getInstance()));
 		milk.registerEntityModifier(new MoveModifier(1.0f, milkPosition[2], milkPosition[3], milkPosition[0], milkPosition[1], EaseCircularOut.getInstance()));

@@ -14,6 +14,7 @@
     <string name="msg_time_to_sleep">Oh, now I\'m sleepy&#8230; Time to go to bed!</string>
     
     <string name="restart">Replay game</string>
+    <string name="back">Go back</string>
     
     <string name="exit_title">Quite game</string>
     <string name="exit_message">Are you sure you want to leave now?</string>

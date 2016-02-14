@@ -79,7 +79,7 @@ private static final GameManager INSTANCE = new GameManager();
 		
 		FontFactory.setAssetBasePath("fonts/");    	
     	splashFontTexture = new BitmapTextureAtlas(activity.getTextureManager(), 256, 128, TextureOptions.BILINEAR_PREMULTIPLYALPHA);
-		splashFont = FontFactory.createFromAsset(activity.getFontManager(), splashFontTexture, activity.getAssets(), "Sniglet-ExtraBold.ttf", 60.0f, true, Color.parseColor(Colors.blue));
+		splashFont = FontFactory.createFromAsset(activity.getFontManager(), splashFontTexture, activity.getAssets(), "Sniglet-ExtraBold.ttf", 60.0f, true, Color.parseColor(Colors.dusty_violet));
 		splashFont.load();
 		
 		baseFontTexture = new BitmapTextureAtlas(activity.getTextureManager(), 512, 512, TextureOptions.BILINEAR_PREMULTIPLYALPHA);
@@ -97,7 +97,7 @@ private static final GameManager INSTANCE = new GameManager();
 		splashSprite = new Sprite(activity.right - 130, activity.bottom + 55, splash_region, vbom);
 		splashScene.attachChild(splashSprite);
 		
-		Text splashText = new Text(activity.centerX, activity.centerY + 50, splashFont, activity.getResources().getString(R.string.loading), engine.getVertexBufferObjectManager());
+		Text splashText = new Text(activity.centerX, activity.centerY + 100, splashFont, activity.getResources().getString(R.string.loading), engine.getVertexBufferObjectManager());
 		splashScene.attachChild(splashText);
 		
 		TextOptions options = new TextOptions(AutoWrap.WORDS, activity.CAMERA_WIDTH - 60, HorizontalAlign.LEFT);
@@ -135,7 +135,7 @@ private static final GameManager INSTANCE = new GameManager();
 	public void loadGameResources() {
 		
 		boldFontTexture = new BitmapTextureAtlas(activity.getTextureManager(), 512, 512, TextureOptions.BILINEAR_PREMULTIPLYALPHA);
-		boldFont = FontFactory.createFromAsset(activity.getFontManager(), boldFontTexture, activity.getAssets(), "Sniglet-ExtraBold.ttf", 36.0f, true, Color.parseColor(Colors.blue));
+		boldFont = FontFactory.createFromAsset(activity.getFontManager(), boldFontTexture, activity.getAssets(), "Sniglet-ExtraBold.ttf", 36.0f, true, Color.parseColor(Colors.hex906090));
 		boldFont.load();
 		
 		try {

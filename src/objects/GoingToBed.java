@@ -97,7 +97,7 @@ public class GoingToBed extends Entity {
 	}
 	
 	public void finalAnimation() {
-		gm.gameScene.sleepy.registerEntityModifier(new MoveModifier(1.0f, gm.activity.centerX, gm.activity.centerY, gm.activity.centerX + 160, gm.activity.centerY + 10));
+		gm.gameScene.sleepy.registerEntityModifier(new MoveModifier(1.0f, gm.activity.centerX, gm.activity.centerY, gm.activity.centerX + 170, gm.activity.centerY + 10));
 		gm.gameScene.sleepy.registerEntityModifier(new ScaleModifier(1, 1, 0.9f));
 		gm.gameScene.sleepy.registerEntityModifier(new RotationModifier(1.0f, 0, 50){
 			@Override protected void onModifierFinished(IEntity pItem) {

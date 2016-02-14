@@ -36,11 +36,13 @@ public class GameHud extends HUD {
 	public Text progressValue;
 	private TickerText zzz;
 	public Sprite button;
+	public Sprite backButton;
 	private Text message;
 	public Sprite blanket;
 	private int completedRituals = 0;
 	
 	public boolean touchable = false;
+	public boolean backTouchable = false;
 	
 	private float centerX, centerY, top, right, bottom, left;
 	
@@ -105,6 +107,7 @@ public class GameHud extends HUD {
 							}
 							if(i == 3) {
 								button.clearEntityModifiers();
+								backButton.registerEntityModifier(new MoveYModifier(1, top - 30, top + 30));
 								if(gm.gameScene.takeAShower.activityEnabled) {
 						    		gm.gameScene.takeAShower.hideActivity(true);
 						    	}
@@ -130,6 +133,36 @@ public class GameHud extends HUD {
 		};
 		attachChild(button);
 		
+		backButton = new Sprite(right - 90, top + 30, gm.button, vbom) {
+			@Override
+			public boolean onAreaTouched(TouchEvent pTouchEvent, float pTouchAreaLocalX, float pTouchAreaLocalY) {
+		        if(backTouchable) {
+		        	switch(pTouchEvent.getAction()) {			
+					case TouchEvent.ACTION_UP:
+						//gm.buttonSound.play();
+						backTouchable = false;
+						if(gm.gameScene.takeAShower.activityEnabled) {
+				    		gm.gameScene.takeAShower.hideActivity(false);
+				    	}
+				    	else if(gm.gameScene.snacking.activityEnabled) {
+				    		gm.gameScene.snacking.hideActivity(false);
+				    	}
+				    	else if(gm.gameScene.brushTeeth.activityEnabled) {
+				    		gm.gameScene.brushTeeth.hideActivity(false);
+				    	}
+				    	else if(gm.gameScene.reading.activityEnabled) {
+				    		gm.gameScene.reading.hideActivity(false);
+				    	}
+				    }
+		        }
+    			return false;
+		    }
+		};
+		attachChild(backButton);
+		
+		Text backText = new Text(backButton.getWidth() / 2, backButton.getHeight() / 2, gm.baseFont, gm.activity.getResources().getString(R.string.back), vbom);
+		backButton.attachChild(backText);
+		
 		Text goToBedText = new Text(right - 90, bottom + 30, gm.baseFont, gm.activity.getResources().getString(R.string.go_to_bed), vbom);
 		attachChild(goToBedText);
 		
@@ -153,7 +186,7 @@ public class GameHud extends HUD {
 	public void completeRitual(final int ritualId) {
 		completedRituals++;
 		if(completedRituals == 4) {
-			gm.gameScene.sleepy.eyes.setCurrentTileIndex(1);
+			gm.gameScene.sleepy.closeEyes();
 		}
 		rituals[ritualId].registerEntityModifier(new ScaleModifier(0.5f, 1, 0, 1, 1) {
 			@Override protected void onModifierFinished(IEntity pItem) {

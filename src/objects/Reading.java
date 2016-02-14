@@ -65,7 +65,7 @@ public class Reading extends Entity {
 			        	}
 			        	//Counts progress while bubbling
 			        	if(reading && progress < 100.0f) {
-			        		progress += 0.05f;
+			        		progress += 0.1f;
 			        		if(progress > 100.0f) progress = 100.0f;
 			        		
 			        		gm.gameScene.gameHud.setProgressBarLevel(progress);

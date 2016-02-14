@@ -65,7 +65,7 @@ public class Snacking extends Entity {
 			        	}
 			        	//Counts progress while bubbling
 			        	if(chewing && progress < 100.0f) {
-			        		progress += 0.1f;
+			        		progress += 0.2f;
 			        		if(progress > 100.0f) progress = 100.0f;
 			        		
 			        		gm.gameScene.gameHud.setProgressBarLevel(progress);
